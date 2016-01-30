@@ -17,8 +17,9 @@ def compute_prob_evil(evil, good, words):
     for word in words:
         evil_times = evil[word] if word in evil else 1
         good_times = good[word] if word in good else 1
-        ratio_evil_to_not *= (float(evil_times) / total_evil_words)
-        ratio_evil_to_not /= (float(good_times) / total_good_words)
+        if evil_times > 1 and good_times > 1:
+            ratio_evil_to_not *= (float(evil_times) / total_evil_words)
+            ratio_evil_to_not /= (float(good_times) / total_good_words)
 
     return ratio_evil_to_not / (1 + ratio_evil_to_not)
 
