@@ -5,11 +5,9 @@ angular.module('BlankApp', ['ngMaterial'])
     $scope.hello = {name: "Boaz"};
     $scope.newName = "";
     $scope.sendPost = function() {
-        var data = $scope.param({
-            json: JSON.stringify({
+        var data = {
                 name: $scope.newName
-            })
-        });
+            };
         $http.post("/soemthing", data).success(function(data, status) {
             $scope.hello = data;
         })
