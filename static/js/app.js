@@ -1,5 +1,3 @@
-
-
 angular.module('BlankApp', ['ngMaterial'])
 .controller('myCtrl', function ($scope, $http) {
     $scope.hello = {name: "Boaz"};
@@ -11,5 +9,8 @@ angular.module('BlankApp', ['ngMaterial'])
         $http.post("/soemthing", data).success(function(data, status) {
             $scope.hello = data;
         })
-    }                   
+    }
 })
+.controller('moreCtrl', function($scope) {
+
+});
