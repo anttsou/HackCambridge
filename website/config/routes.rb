@@ -1,4 +1,28 @@
 Rails.application.routes.draw do
+  #get 'links/index'
+
+  #get 'links/show'
+
+  #get 'links/new'
+
+  #get 'links/edit'
+
+  #get 'links/create'
+
+  #get 'links/update'
+
+  #get 'links/destroy'
+
+  resources :links
+
+  root "links#new"
+  get 'links/new', to: 'links#new'
+  #get 'demo/index'
+  # match "links/create"
+  #   :to => "links#create"
+	# 	:via => :get
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
